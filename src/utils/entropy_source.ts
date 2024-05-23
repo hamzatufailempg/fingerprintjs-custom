@@ -126,7 +126,7 @@ export function loadSources<TSourceOptions, TSources extends UnknownSources<TSou
   sourceOptions: TSourceOptions,
   excludeSources: readonly TExclude[],
 ): () => Promise<Omit<SourcesToComponents<TSources>, TExclude>> {
-  const includedSources = Object.keys(sources).filter((sourceKey) => excludes(excludeSources, sourceKey)) as Exclude<
+  const includedSources = Object.keys(sources).filter((sourceKey) => excludes(["touchSupport", "pdfViewerEnabled","plugins","screenResolution","timezone", ...excludeSources], sourceKey)) as Exclude<
     keyof TSources,
     TExclude
   >[]
