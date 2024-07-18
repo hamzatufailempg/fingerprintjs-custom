@@ -57,45 +57,44 @@ export const sources = {
   fonts: getFonts,
   domBlockers: getDomBlockers,
   fontPreferences: getFontPreferences,
-  audio: getAudioFingerprint,
-  screenFrame: getScreenFrame,
-  canvas: getCanvasFingerprint,
+  audio: getAudioFingerprint, // TRUE
+  screenFrame: getScreenFrame, 
+  canvas: getCanvasFingerprint, // TRUE
 
-  osCpu: getOsCpu,
-  languages: getLanguages,
-  colorDepth: getColorDepth,
-  deviceMemory: getDeviceMemory,
+  osCpu: getOsCpu, //TRUE
+  languages: getLanguages, //TRUE
+  colorDepth: getColorDepth, //TRUE
+  deviceMemory: getDeviceMemory, //TRUE
   screenResolution: getScreenResolution,
   hardwareConcurrency: getHardwareConcurrency,
-  timezone: getTimezone,
-  sessionStorage: getSessionStorage,
-  localStorage: getLocalStorage,
-  indexedDB: getIndexedDB,
-  openDatabase: getOpenDatabase,
-  cpuClass: getCpuClass,
-  platform: getPlatform,
-  plugins: getPlugins,
-  touchSupport: getTouchSupport,
+  timezone: getTimezone, //TRUE
+  sessionStorage: getSessionStorage, //TRUE
+  localStorage: getLocalStorage, //TRUE
+  indexedDB: getIndexedDB, //TRUE
+  openDatabase: getOpenDatabase, //TRUE
+  cpuClass: getCpuClass, //TRUE
+  platform: getPlatform, //TRUE
+  plugins: getPlugins, 
+  touchSupport: getTouchSupport, //TRUE
   vendor: getVendor,
   vendorFlavors: getVendorFlavors,
   cookiesEnabled: areCookiesEnabled,
   colorGamut: getColorGamut,
-  invertedColors: areColorsInverted,
-  forcedColors: areColorsForced,
+  invertedColors: areColorsInverted, //TRUE
+  forcedColors: areColorsForced, //TRUE
   monochrome: getMonochromeDepth,
-  contrast: getContrastPreference,
+  contrast: getContrastPreference, //TRUE
   reducedMotion: isMotionReduced,
   reducedTransparency: isTransparencyReduced,
-  hdr: isHDR,
-  math: getMathFingerprint,
-  pdfViewerEnabled: isPdfViewerEnabled,
-  architecture: getArchitecture,
+  hdr: isHDR, //TRUE
+  math: getMathFingerprint, //TRUE
+  pdfViewerEnabled: isPdfViewerEnabled, //TRUE
+  architecture: getArchitecture, //TRUE
   applePay: getApplePayState,
   privateClickMeasurement: getPrivateClickMeasurement,
-
   // Some sources can affect other sources (e.g. WebGL can affect canvas), so it's important to run these sources
   // after other sources.
-  webGlBasics: getWebGlBasics,
+  webGlBasics: getWebGlBasics, 
   webGlExtensions: getWebGlExtensions,
 }
 
