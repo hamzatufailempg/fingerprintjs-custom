@@ -571,7 +571,7 @@ function loadSource(source, sourceOptions) {
  * This function is out of Semantic Versioning, i.e. can change unexpectedly. Usage is at your own risk.
  */
 function loadSources(sources, sourceOptions, excludeSources) {
-    var includedSources = Object.keys(sources).filter(function (sourceKey) { return excludes(__spreadArray(["touchSupport", "pdfViewerEnabled", "fonts", "domBlockers", "fontPreferences", "screenFrame", "screenResolution", "hardwareConcurrency", "plugins", "vendor", "vendorFlavors", "cookiesEnabled", "colorGamut", "monochrome", "reducedMotion", "reducedTransparency", "applePay", "privateClickMeasurement", "webGlBasics", "webGlExtensions"], excludeSources, true), sourceKey); });
+    var includedSources = Object.keys(sources).filter(function (sourceKey) { return excludes(__spreadArray(["audio", "hdr", "canvas", "colorDepth", "forcedColors", "touchSupport", "pdfViewerEnabled", "fonts", "domBlockers", "fontPreferences", "screenFrame", "screenResolution", "hardwareConcurrency", "plugins", "vendor", "vendorFlavors", "cookiesEnabled", "colorGamut", "monochrome", "reducedMotion", "reducedTransparency", "applePay", "privateClickMeasurement", "webGlBasics", "webGlExtensions"], excludeSources, true), sourceKey); });
     // Using `mapWithBreaks` allows asynchronous sources to complete between synchronous sources
     // and measure the duration correctly
     var sourceGettersPromise = mapWithBreaks(includedSources, function (sourceKey) {
